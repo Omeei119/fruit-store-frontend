@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import Header from "./header";
-import Footer from "./footer";
-import ProductList from "./productlist";
-import Cart from "./cart";
+import Header from './Header';
+import Footer from "./Footer";
+import ProductList from "./Productlist";
+import Cart from "./Cart";
 import SearchBar from "./SearchBar";
 import "./App.css";
 
