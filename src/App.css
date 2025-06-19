@@ -1,0 +1,367 @@
+/* General Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.App {
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  /* min-width: 200vh; */
+  padding: 0 20px;
+  overflow: auto;
+}
+
+/* Cart Button Styles */
+.cart-button {
+  background: linear-gradient(135deg, #feb47b, #ff7e5f);
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 50px;
+  cursor: pointer;
+  border: none;
+  font-size: 18px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cart-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.cart-button:focus {
+  outline: none;
+}
+
+/* Product List and Card Styles */
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.product-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 250px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.product-card img {
+  max-width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.product-card img:hover {
+  transform: scale(1.1);
+}
+
+.product-card button,
+.quantity-button {
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 10px 0;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.quantity-button {
+  width: 40px;
+  padding: 8px 0;
+}
+
+.product-card button:hover,
+.quantity-button:hover {
+  opacity: 0.85;
+  transform: scale(1.05);
+}
+
+.product-card button:focus,
+.quantity-button:focus {
+  outline: none;
+}
+
+/* Cart Popup Styles */
+.cart-popup {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #fff;
+  padding: 25px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  z-index: 1000;
+  border-radius: 12px;
+  max-height: 80vh;
+  overflow-y: auto;
+  transition: transform 0.3s ease;
+}
+
+.cart-popup button {
+  background: linear-gradient(135deg, #feb47b, #ff7e5f);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: 10px;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.cart-popup button:hover {
+  opacity: 0.85;
+  transform: scale(1.05);
+}
+
+.cart {
+  padding: 10px 0;
+}
+
+.cart li {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 20px;
+  border-bottom: 1px solid #ddd;
+  font-size: 16px;
+}
+
+.cart li button {
+  background: linear-gradient(135deg, #feb47b, #ff7e5f);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.cart li button:hover {
+  opacity: 0.85;
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #ff7e5f;
+  padding: 15px 0;
+  text-align: center;
+  color: white;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  font-size: 18px;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Search Bar Styling */
+.search-bar {
+  /* display: flex; */
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.search-bar input {
+  width: 80%;
+  max-width: 700px;
+  padding: 12px 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.search-bar input:focus {
+  border-color: #ff7e5f;
+  outline: none;
+}
+
+/* Header Styles */
+.header {
+  padding: 20px;
+  text-align: center;
+  color: whitesmoke;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.loginlogo {
+  padding: 5px;
+  gap: 5px;
+  border: 5px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  
+
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .product-card {
+    width: 220px;
+  }
+
+  .cart-popup {
+    width: 350px;
+  }
+
+  .footer {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 992px) {
+  .product-card {
+    width: 200px;
+  }
+
+  .cart-popup {
+    width: 320px;
+  }
+
+  .search-bar input {
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-card {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .cart-popup {
+    width: 280px;
+    padding: 20px;
+  }
+
+  .search-bar input {
+    width: 100%;
+  }
+
+  .footer {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-card {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .cart-popup {
+    width: 260px;
+    padding: 15px;
+  }
+
+  .search-bar input {
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+
+  .footer {
+    font-size: 12px;
+  }
+
+  .cart-button {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+}
+/* Overlay for modals */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Content of the modal */
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 500px;
+  height: 250px;
+  padding: 5px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Close button */
+.close-modal {
+  margin-top: 20px;
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  
+  cursor: pointer;
+}
+
+.close-modal:hover {
+  background-color: darkred;
+}
+
+/* Login and Signup buttons styling */
+.fas {
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+.login-container
+{
+  padding: 10px;
+  gap: 10px;
+  margin: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.input-field
+{
+  padding: 10px;
+  gap: 5px;
+  align-items: start;
+  display: flex;
+  justify-content: start;
+  
+}

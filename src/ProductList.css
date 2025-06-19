@@ -1,0 +1,159 @@
+/* Product List Container */
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Placeholder for Empty Search Results */
+.no-results {
+  text-align: center;
+  font-size: 18px;
+  color: #666;
+  padding: 40px;
+  width: 100%;
+}
+
+/* Add to Cart Button Styling */
+.product-card button {
+  background-color: #ff7e5f; /* Default background color */
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+  transition: background-color 0.3s ease; /* Smooth color transition */
+}
+
+/* Added Button Styling (When item is added to cart) */
+.product-card button.added {
+  background-color: #4caf50; /* Green color for 'Added to Cart' */
+  cursor: not-allowed; /* Change cursor to indicate disabled */
+}
+
+/* Disabled Button Styling */
+.product-card button:disabled {
+  background-color: #ddd; /* Gray for disabled button */
+  cursor: not-allowed;
+}
+
+/* Optional: Button hover effect */
+.product-card button:hover {
+  opacity: 0.8;
+}
+
+.product-card button.added:hover {
+  opacity: 1; /* Prevent hover effect for 'Added to Cart' button */
+}
+
+/* Product Card Styles */
+.product-card {
+  background-color: #fff;
+  padding: 10px;
+  width: 250px;
+  margin-bottom: 20px;
+}
+
+.product-card img {
+  max-width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+  .product-card {
+    width: 230px;
+  }
+}
+
+@media (max-width: 992px) {
+  .product-list {
+    gap: 15px;
+  }
+  .product-card {
+    width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-list {
+    gap: 10px;
+  }
+  .product-card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-list {
+    gap: 8px;
+  }
+  .product-card {
+    width: 100%;
+  }
+  button {
+    font-size: 14px; /* Adjust button size for smaller screens */
+  }
+}
+.edit-form-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(231, 34, 34, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.edit-form {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(214, 56, 56, 0.2);
+  width: 400px;
+}
+
+.edit-form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.edit-form input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #bf2828;
+  border-radius: 4px;
+}
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(191, 223, 232, 0.599);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.edit-form {
+  background-color: beige;
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px;
+  box-shadow: 0
+}
