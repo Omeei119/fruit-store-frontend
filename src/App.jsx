@@ -59,7 +59,7 @@ function App() {
   // Update product in the fruit list
   const handleUpdateProduct = async (updatedProduct) => {
     try {
-      const response = await axios.put(`http://localhost:3000/fruits/${updatedProduct.id}`, updatedProduct);
+      const response = await axios.put(`https://healthy-fruit-store.onrender.com/fruits/${updatedProduct.id}`, updatedProduct);
       if (response.status === 200) {
         setFruits((prevFruits) =>
           prevFruits.map((fruit) =>
@@ -77,7 +77,7 @@ function App() {
   // Delete product from fruit list
   const handleDeleteProduct = async (id) => {
     try {
-      const response = await axios.delete(`http://localhost:3000/fruits/${id}`);
+      const response = await axios.delete(`https://healthy-fruit-store.onrender.com/fruits/${id}`);
       if (response.status === 200) {
         setFruits((prevFruits) => prevFruits.filter((fruit) => fruit.id !== id));
         alert("Product deleted successfully!");
