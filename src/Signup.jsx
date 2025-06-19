@@ -17,7 +17,7 @@ function SignupPage(props) {
   }
 
   async function checkUserExists(user) {
-    let response = await axios("http://localhost:3000/users");
+    let response = await axios("https://healthy-fruit-store.onrender.com/users");
     let data = await response.data;
     let filteredData = data.filter((e) => e.emailid === user.emailid);
     if (filteredData.length >= 1) {
@@ -30,7 +30,7 @@ function SignupPage(props) {
   }
 
   async function addUser(user) {
-    await axios.post("http://localhost:3000/users", user);
+    await axios.post("https://healthy-fruit-store.onrender.com/users", user);
     setSignupStatus("success");
   }
 

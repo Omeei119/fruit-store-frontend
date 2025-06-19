@@ -18,7 +18,7 @@ function App() {
   useEffect(() => {
     async function fetchFruitList() {
       try {
-        const response = await axios.get("http://localhost:3000/fruits");
+        const response = await axios.get("https://healthy-fruit-store.onrender.com/fruits");
         setFruits(response.data);  // Set fruits data
       } catch (error) {
         console.error("Error fetching fruits:", error);

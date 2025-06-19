@@ -18,7 +18,7 @@ function LoginPage(props) {
   }
 
   async function checkUser(user) {
-    let response = await axios("http://localhost:3000/users");
+    let response = await axios("https://healthy-fruit-store.onrender.com/users");
     let data = await response.data;
     let filteredData = data.filter(
       (e, index) => e.emailid == user.emailid && e.password == user.password
