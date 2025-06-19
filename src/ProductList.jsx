@@ -30,7 +30,7 @@ function ProductList({ fruits, setFruits, cartItems, onAddToCart, loggedInUser, 
     if (window.confirm("Are you sure you want to delete this product?")) {
       try {
         // Using fetch with await for product deletion
-        const response = await fetch(`http://localhost:3000/fruits/${id}`, {
+        const response = await fetch(`https://healthy-fruit-store.onrender.com/fruits/${id}`, {
           method: "DELETE",
         });
 
@@ -60,7 +60,7 @@ function ProductList({ fruits, setFruits, cartItems, onAddToCart, loggedInUser, 
 
     try {
       // Send POST request to add the new product using fetch and await
-      const response = await fetch("http://localhost:3000/fruits", {
+      const response = await fetch("https://healthy-fruit-store.onrender.com/fruits", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(newProduct),
@@ -93,7 +93,7 @@ function ProductList({ fruits, setFruits, cartItems, onAddToCart, loggedInUser, 
 
     try {
       // Update the product using fetch with await
-      const response = await fetch(`http://localhost:3000/fruits/${editingProduct.id}`, {
+      const response = await fetch(`https://healthy-fruit-store.onrender.com/fruits/${editingProduct.id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(editingProduct),
