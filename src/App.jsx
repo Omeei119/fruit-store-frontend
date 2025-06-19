@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Header from './Header';
 import Footer from "./Footer";
-import ProductList from "./Productlist";
+import ProductList from "./ProductList";
 import Cart from "./Cart";
 import SearchBar from "./SearchBar";
 import "./App.css";
