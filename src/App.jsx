@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Header from "./header";
-import Footer from "./Footer";
+import Footer from "./footer";
 import ProductList from "./productlist";
 import Cart from "./cart";
 import SearchBar from "./SearchBar";
